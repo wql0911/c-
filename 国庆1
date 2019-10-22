@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+char c;
+scanf("%c", &c);
+char c = d +32;
+printf("%c", d);
+
+   return 0;
+}
