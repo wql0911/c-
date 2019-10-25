@@ -4,13 +4,12 @@ int main()
 	int n;
 	int sum = 0;
 	scanf("%d", &n);
-	for (int i = 1; i == n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		int a = i % 7;
 		if (a = 0)
-			sum = i + sum;
+		  sum = i + sum;
 	}
-  printf("%d", sum);
+        printf("%d", sum);
 	return 0;
 }
-//输出一直为0
