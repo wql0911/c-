@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+	int n;	
+	float sum = 0;
+	int a = 1;
+    
+	printf("请输入一个1-20的数字");
+	scanf("%d/n", &n);
+	for (int i = 1; i<=n; i++)
+	{
+		a = a * i;//计算阶乘
+		sum = sum + a；
+	}
+  
+        printf("%。2f", sum);//输出结果保留两位小数
+  
+	return 0;
+}
+//程序出错，当输入值为2之后输出为0，若改为输出a则无输出，循环出错n==i循环只会执行一次
