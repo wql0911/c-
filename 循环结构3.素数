@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,a;
+	int b=100;
+	int num=0;
+	scanf("%d",&n);
+	for(i=2;b<=n;i++,b++)
+	{
+		if(b%i==0)//判断该数是否有除外其他因子
+		 num=num;
+		else
+		 num=num+1;
+	}
+	printf("%d",num);
+	return 0;
+
+}
