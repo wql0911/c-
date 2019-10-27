@@ -1,0 +1,19 @@
+//程序每次读入一个正三位数，然后输出逆序的数字。注意，当输入的数字含有结尾的0时，输出不应带有前导的0
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);//vs报错返回值被忽略改成scanf_s
+    if(a%100)
+    {
+        if(a%10)
+           printf("%d%d%d",a%10,(a/10)%10,a/100);
+        else
+           printf("%d%d",(a/10)%10,a/100);
+    }
+    else
+        printf("%d",a/100);
+    return 0;
+}
+//vs报错找到一个或多个多重定义的符号，dev c++正常，输出没错
