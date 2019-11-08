@@ -1,0 +1,60 @@
+//已知定点坐标
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double x1,y1,x2,y2,x3,y3,a,b,c,p,s;
+    scanf("%lf%lf%lf%lf%lf%lf",&x1,&y1,&x2,&y2,&x3,&y3);//scanf("%f%f%f%f%f%f",&x1,&y1,&x2,&y2,&x3,&y3);
+    a=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+    b=sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+    c=sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3));
+    p=(a+b+c)/2;
+    s=sqrt(p*(p-a)*(p-b)*(p-c));
+    printf("%.2lf",s);//printf("%.2f",s);
+    return 0;
+}
+
+
+
+
+//已知三边长
+#include<stdio.h>
+#include<math.h>
+int main()
+{   
+  double a,b,c,p;
+  scanf("%lf%lf%lf",&a,&b,&c);
+  p=(a+b+c)/2;
+  printf("%.3f",sqrt(p*(p-a)*(p-b)*(p-c))); 
+	return 0;
+}
+
+
+
+//判断是否能组成三角形及组成什么三角形
+#include <stdio.h>
+
+int main()
+{
+	int x, y, z;
+	printf("三角形三边 x,y,z=");
+	scanf_s("%d%d%d", &x, &y, &z);
+	if (x + y > z&& x + z > y&& y + z > x)
+	{
+		if (x == y && x == z && y == z)
+			printf("三角形为等边三角形\n");
+		else
+			if (x == y || y == z || x == z)
+				printf("三角形为等腰三角形\n");
+			else
+				if (x * x + y * y == z * z || x * x + z * z == y * y || y * y + z * z == x * x)
+					printf("三角形为直角三角形\n");
+				else
+					printf("三角形为普通三角形\n");
+	}
+	else
+	{
+		printf("不构成三角形\n");
+	}
+	return 0;
+}
